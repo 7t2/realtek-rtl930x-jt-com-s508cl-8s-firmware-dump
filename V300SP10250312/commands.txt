@@ -1,0 +1,29 @@
+# This is the layout of the switch flash
+
+root@OpenWrt:~# ls /dev/mtd
+mtd0       mtd1ro     mtd3       mtd4ro     mtdblock0  mtdblock3
+mtd0ro     mtd2       mtd3ro     mtd5       mtdblock1  mtdblock4
+mtd1       mtd2ro     mtd4       mtd5ro     mtdblock2  mtdblock5
+root@OpenWrt:~# ls /dev/mtd*
+/dev/mtd0       /dev/mtd2ro     /dev/mtd5       /dev/mtdblock3
+/dev/mtd0ro     /dev/mtd3       /dev/mtd5ro     /dev/mtdblock4
+/dev/mtd1       /dev/mtd3ro     /dev/mtdblock0  /dev/mtdblock5
+/dev/mtd1ro     /dev/mtd4       /dev/mtdblock1
+/dev/mtd2       /dev/mtd4ro     /dev/mtdblock2
+root@OpenWrt:~# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00100000 00010000 "u-boot"
+mtd1: 00030000 00010000 "board-info"
+mtd2: 000d0000 00010000 "syslog"
+mtd3: 01e00000 00010000 "firmware"
+mtd4: 00800000 00010000 "kernel"
+mtd5: 01600000 00010000 "rootfs"
+
+# Here are the commands I used to obtain these dumps
+
+ssh root@192.168.1.1 "cat /dev/mtd0ro" > mtd0ro.u-boot.bin
+ssh root@192.168.1.1 "cat /dev/mtd1ro" > mtd1ro.board-info.bin
+ssh root@192.168.1.1 "cat /dev/mtd2ro" > mtd2ro.syslog.bin
+ssh root@192.168.1.1 "cat /dev/mtd3ro" > mtd3ro.firmware.bin
+ssh root@192.168.1.1 "cat /dev/mtd4ro" > mtd4ro.kernel.bin
+ssh root@192.168.1.1 "cat /dev/mtd5ro" > mtd5ro.rootfs.bin

@@ -1,0 +1,29 @@
+System is initializing...
+**************************************************
+WINBOND/
+Net Initialization Completed
+U-boot version: V2.00
+Hit Ctrl+B to stop autoboot:  0
+Loading primary partition image ...
+loading image to 0x81000000 with JFFS2
+load image size: 14708262 bytes
+Booting kernel with Legacy format image at 81000100
+Start checking the Kernel Image CRC ............OK
+Start uncompressing the Kernel Image ...........OK
+
+Starting kernel ...
+
+Init Linux Shell Task Module....OK!
+Init Skb Process Module....OK!
+Init Util Filesystem Module....OK!
+Init System Customer Information ....OK!
+Init System Log Module...OK!
+Current time: Wed Mar 12 00:00:00 2025 [UTC]
+Firmware Compile Time: 2025-03-12 09:29:13
+Switch System Software Version V300SP10250312
+Init VLAN Module...OK!
+Init MAC Address...OK!
+System Management MAC Address XX-XX-XX-XX-XX-XX
+Loading Factory Default Config ...
+Http server is Enabled
+Init Default Config ...
